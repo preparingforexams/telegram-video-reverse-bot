@@ -1,0 +1,22 @@
+# IDEs
+.idea/
+.vscode/
+
+# Distribution files
+*.zip
+python/
+
+# Media files
+*.mkv
+*.mp4
+
+# Python
+venv/
+*.pyc
+
+# Terraform
+*.tfvars
+.terraform
+
+# macOS
+.DS_Store
