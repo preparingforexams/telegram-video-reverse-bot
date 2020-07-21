@@ -10,7 +10,7 @@ data "aws_iam_policy_document" "assume_lambda_role_policy" {
 }
 
 resource "aws_iam_role" "lambda_role" {
-  name_prefix        = "reversebot"
+  name_prefix        = var.bot_name
   assume_role_policy = data.aws_iam_policy_document.assume_lambda_role_policy.json
 }
 
