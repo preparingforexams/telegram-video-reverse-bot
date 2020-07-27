@@ -12,7 +12,7 @@ resource "aws_lambda_function" "handle_update" {
 
   environment {
     variables = {
-        CONVERT_LAMBDA_NAME = aws_lambda_function.convert.function_name
+      CONVERT_LAMBDA_NAME = aws_lambda_function.convert.function_name
     }
   }
 }

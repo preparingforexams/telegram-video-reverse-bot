@@ -22,8 +22,8 @@ data "aws_iam_policy_document" "lambda_logging" {
 }
 
 resource "aws_iam_policy" "lambda_logging" {
-  name_prefix   = "${var.bot_name}_lambda_logging"
-  policy = data.aws_iam_policy_document.lambda_logging.json
+  name_prefix = "${var.bot_name}_lambda_logging"
+  policy      = data.aws_iam_policy_document.lambda_logging.json
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_logs" {

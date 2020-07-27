@@ -4,7 +4,7 @@ resource "aws_lambda_function" "convert" {
   runtime       = "python3.8"
   handler       = "bot.convert"
   timeout       = 900
-  memory_size = 1024
+  memory_size   = 1024
 
   filename         = "../code.zip"
   source_code_hash = filebase64sha256("../code.zip")
@@ -13,7 +13,7 @@ resource "aws_lambda_function" "convert" {
 
   environment {
     variables = {
-        TELEGRAM_TOKEN = var.telegram_token
+      TELEGRAM_TOKEN = var.telegram_token
     }
   }
 }
