@@ -1,12 +1,10 @@
 terraform {
   required_version = "1.4.5"
 
-  backend "remote" {
-    hostname = "app.terraform.io"
-
-    workspaces {
-      name = "reversebot"
-    }
+  backend "s3" {
+    bucket = "legacy-terraform-states"
+    key = "videoreverse"
+    region = "eu-central-1"
   }
 
   required_providers {
@@ -33,12 +31,8 @@ provider "cloudflare" {
   api_token = var.cloudflare_token
 }
 
-variable "aws_region" {
-  default = "eu-central-1"
-}
-
 provider "aws" {
-  region  = var.aws_region
+  region  = "eu-central-1"
 }
 
 provider "telegram" {
