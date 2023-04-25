@@ -1,7 +1,7 @@
 resource "aws_lambda_function" "handle_update" {
   function_name = "${var.bot_name}-handleupdate"
   role          = aws_iam_role.lambda_role.arn
-  runtime       = "python3.8"
+  runtime       = "python3.10"
   handler       = "bot.handle_update"
   timeout       = 30
 

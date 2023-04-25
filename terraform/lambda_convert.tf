@@ -1,7 +1,7 @@
 resource "aws_lambda_function" "convert" {
   function_name = "${var.bot_name}-convert"
   role          = aws_iam_role.lambda_role.arn
-  runtime       = "python3.8"
+  runtime       = "python3.10"
   handler       = "bot.convert"
   timeout       = 900
   memory_size   = 1024
