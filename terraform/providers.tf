@@ -20,7 +20,7 @@ terraform {
 
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "~> 3.0"
+      version = "~> 4.0"
     }
   }
 }
@@ -36,6 +36,5 @@ provider "aws" {
 }
 
 provider "telegram" {
-  # You'll need to install https://github.com/yi-jiayu/terraform-provider-telegram
   bot_token = var.telegram_token
 }
