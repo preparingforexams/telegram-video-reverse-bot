@@ -5,6 +5,7 @@ provider "registry.terraform.io/cloudflare/cloudflare" {
   version     = "2.27.0"
   constraints = "~> 2.0"
   hashes = [
+    "h1:AI4IEvBTQnESyWCRc/EHdarhu6ejYnQbBO5Y03m4a3s=",
     "h1:oIaG4g43i2ts961qg2t1OPSgJ7OmvingS6MFscKwPps=",
     "zh:15b7e8f7516ebd37461fb5a3b843dd0c250158c8000a2dc55b7b6f02780bee0f",
     "zh:187eed008324c43be4af075a68cf375ec2f3999c87ead243e64743abf2cb01ab",
@@ -28,6 +29,7 @@ provider "registry.terraform.io/hashicorp/aws" {
   constraints = "~> 3.0"
   hashes = [
     "h1:nrYpq9ne3FNUmjekbc0ayKE7wNu7BaMpV7oSC+qjAC4=",
+    "h1:z1+WjdwuRX8Aa9a7YKXErhZ5AuvoXiDq7FHts30sZak=",
     "zh:1cf933104a641ffdb64d71a76806f4df35d19101b47e0eb02c9c36bd64bfdd2d",
     "zh:273afaf908775ade6c9d32462938e7739ee8b00a0de2ef3cdddc5bc115bb1d4f",
     "zh:2bc24ae989e38f575de034083082c69b41c54b8df69d35728853257c400ce0f4",
@@ -51,6 +53,7 @@ provider "registry.terraform.io/yi-jiayu/telegram" {
   constraints = "0.3.1"
   hashes = [
     "h1:DDDO6RxCeXYEKuYjwr1jSG93EamML4BocytDjEzZQ4k=",
+    "h1:K+GsnDXN1kqtUUW5NMQpkhfpXHXl5AxGiMFPijZ4Q5Y=",
     "zh:13219dff678c0b88ae92dbf4c48a13a0358c9cc48db225084c9354c8fb1615d4",
     "zh:6d9cee5d90f242083159d792c3c2045036535264951e9803d2da7a846dcb6006",
     "zh:6f2415f2024e233014c6d9e3e226dd6a01d76463da93c0faef225d44d156077c",

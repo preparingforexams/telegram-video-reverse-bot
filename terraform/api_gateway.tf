@@ -20,9 +20,7 @@ resource "aws_api_gateway_deployment" "deployment" {
   stage_name  = "prod"
 
   triggers = {
-    redeployment = sha1(join(",", list(
-      jsonencode(aws_api_gateway_integration.handle_update)
-    )))
+    redeployment = sha1(jsonencode(aws_api_gateway_integration.handle_update))
   }
 
   lifecycle {
