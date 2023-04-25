@@ -6,6 +6,23 @@ terraform {
       name = "reversebot"
     }
   }
+
+  required_providers {
+    telegram = {
+      source  = "yi-jiayu/telegram"
+      version = "0.3.1"
+    }
+
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "~> 2.0"
+    }
+  }
 }
 
 variable "cloudflare_token" {}
