@@ -1,5 +1,5 @@
 terraform {
-  required_version = "1.4.7"
+  required_version = "1.6.4"
 
   backend "s3" {
     bucket = "legacy-terraform-states"
