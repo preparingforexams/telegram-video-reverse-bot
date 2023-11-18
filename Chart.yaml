@@ -1,0 +1,4 @@
+apiVersion: v2
+name: video-reverse-bot
+type: application
+version: 1.0.0

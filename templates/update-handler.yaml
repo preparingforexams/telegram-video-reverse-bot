@@ -1,0 +1,33 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name}}-update-handler
+spec:
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Release.Name}}-update-handler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name}}-update-handler
+  serviceName: {{ .Release.Name}}-update-handler
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name}}-update-handler
+    spec:
+      containers:
+        - name: app
+          image: {{ .Values.image.app }}
+          envFrom:
+            - secretRef:
+                name: {{ .Release.Name}}-secrets
+          resources:
+            requests:
+              cpu: 20m
+              memory: 128Mi

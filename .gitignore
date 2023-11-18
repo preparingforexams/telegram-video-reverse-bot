@@ -1,23 +1,12 @@
-# IDEs
+# Files and directories created by conventional Python tools.
+__pycache__
+.venv*
+venv*
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# IntelliJ IDEA
 .idea/
-.vscode/
 
-# Distribution files
-*.zip
-python/
-
-# Media files
-*.mkv
-*.mp4
-
-# Python
-venv/
-.venv/
-*.pyc
-
-# Terraform
-*.tfvars
-.terraform
-
-# macOS
-.DS_Store
+.env

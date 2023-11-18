@@ -1,0 +1,4 @@
+.git
+**/.dart_tool
+.venv/
+.*_cache
