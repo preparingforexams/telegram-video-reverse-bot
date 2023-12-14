@@ -17,7 +17,7 @@ priority = "explicit"
 bs-config = { version = "1.0.0", source = "internal" }
 certifi = "2023.11.17"
 httpx = "^0.25.1"
-python = "~3.11"
+python = "~3.12"
 python-telegram-bot = "20.7"
 sentry-sdk = "^1.14.0"
 
