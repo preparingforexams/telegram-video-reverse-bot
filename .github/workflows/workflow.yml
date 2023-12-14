@@ -12,12 +12,12 @@ jobs:
   lint:
     uses: BlindfoldedSurgery/actions-python/.github/workflows/lint.yml@v1
     with:
-      python-version: '3.11'
+      python-version: '3.12'
 
   test:
     uses: BlindfoldedSurgery/actions-python/.github/workflows/test.yml@v1
     with:
-      python-version: '3.11'
+      python-version: '3.12'
 
   build-container-image:
     needs:
