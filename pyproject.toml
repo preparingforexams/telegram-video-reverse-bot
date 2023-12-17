@@ -14,7 +14,7 @@ url = "https://pypi.blindfolded.surgery"
 priority = "explicit"
 
 [tool.poetry.dependencies]
-bs-config = { version = "1.0.0", source = "internal" }
+bs-config = { version = "1.0.1", source = "internal" }
 certifi = "2023.11.17"
 httpx = "^0.25.1"
 python = "~3.12"
