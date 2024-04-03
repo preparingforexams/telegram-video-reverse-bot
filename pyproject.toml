@@ -14,7 +14,7 @@ url = "https://pypi.blindfolded.surgery"
 priority = "explicit"
 
 [tool.poetry.dependencies]
-bs-config = { version = "1.0.1", source = "internal" }
+bs-config = { tag = "v1.0.1", extras = ["dotenv"], git = "https://github.com/BlindfoldedSurgery/bs-config.git" }
 certifi = "2024.2.2"
 # dictated by python-telegram-bot
 httpx = "*"
