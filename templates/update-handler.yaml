@@ -11,7 +11,7 @@ kind: StatefulSet
 metadata:
   name: {{ .Release.Name}}-update-handler
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: {{ .Release.Name}}-update-handler
