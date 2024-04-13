@@ -1,0 +1,3 @@
+appVersion: latest
+image:
+  app: ghcr.io/preparingforexams/telegram-video-reverse-bot

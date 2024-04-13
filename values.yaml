@@ -1,6 +1,0 @@
-image:
-  app: ${IMAGE_NAME}:${GITHUB_SHA}
-sentry:
-  dsn: ${SENTRY_DSN}
-telegram:
-  apiKey: ${TELEGRAM_TOKEN}
