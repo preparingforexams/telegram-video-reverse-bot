@@ -11,7 +11,7 @@ kind: StatefulSet
 metadata:
   name: update-handler
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: update-handler
@@ -29,5 +29,5 @@ spec:
                 name: secrets
           resources:
             requests:
-              cpu: 20m
+              cpu: 10m
               memory: 128Mi
