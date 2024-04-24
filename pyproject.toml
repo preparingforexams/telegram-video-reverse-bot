@@ -24,7 +24,7 @@ sentry-sdk = "^1.14.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.0.0"
-mypy = "~1.9"
+mypy = "~1.10"
 pytest = "^8.0.0"
 ruff = "0.4.1"
 
