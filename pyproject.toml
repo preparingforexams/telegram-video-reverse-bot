@@ -20,7 +20,7 @@ certifi = "2024.2.2"
 httpx = "*"
 python = "~3.12"
 python-telegram-bot = "21.1.1"
-sentry-sdk = "^1.14.0"
+sentry-sdk = "^2.0.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.0.0"
