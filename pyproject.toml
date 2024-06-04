@@ -15,7 +15,7 @@ priority = "explicit"
 
 [tool.poetry.dependencies]
 bs-config = { tag = "v1.0.1", extras = ["dotenv"], git = "https://github.com/BlindfoldedSurgery/bs-config.git" }
-certifi = "2024.2.2"
+certifi = "2024.6.2"
 # dictated by python-telegram-bot
 httpx = "*"
 python = "~3.12"
