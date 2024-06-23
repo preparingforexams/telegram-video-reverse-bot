@@ -10,11 +10,11 @@ packages = [
 
 [[tool.poetry.source]]
 name = "internal"
-url = "https://pypi.blindfolded.surgery"
+url = "https://pypi.bjoernpetersen.net"
 priority = "explicit"
 
 [tool.poetry.dependencies]
-bs-config = { tag = "v1.0.1", extras = ["dotenv"], git = "https://github.com/BlindfoldedSurgery/bs-config.git" }
+bs-config = { version = "1.0.2", extras = ["dotenv"], source = "internal" }
 certifi = "2024.6.2"
 # dictated by python-telegram-bot
 httpx = "*"
