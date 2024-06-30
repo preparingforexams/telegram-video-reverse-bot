@@ -23,7 +23,6 @@ python-telegram-bot = "21.3"
 sentry-sdk = "^2.0.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^24.0.0"
 mypy = "~1.10"
 pytest = "^8.0.0"
 ruff = "0.5.0"
@@ -41,10 +40,10 @@ strict = false
 check_untyped_defs = true
 disallow_untyped_defs = false
 
-[tool.ruff]
+[tool.ruff.lint]
 extend-select = [
     "I001",
 ]
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 known-first-party = ["app"]
