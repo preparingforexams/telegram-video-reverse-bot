@@ -17,7 +17,7 @@ url = "https://pypi.bjoernpetersen.net"
 priority = "explicit"
 
 [tool.poetry.dependencies]
-bs-config = { version = "1.0.2", extras = ["dotenv"], source = "internal" }
+bs-config = { version = "1.1.0", extras = ["dotenv"], source = "internal" }
 certifi = "2024.8.30"
 # dictated by python-telegram-bot
 httpx = "*"
