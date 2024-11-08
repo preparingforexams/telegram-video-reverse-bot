@@ -22,7 +22,7 @@ certifi = "2024.8.30"
 # dictated by python-telegram-bot
 httpx = "*"
 python = "~3.13"
-python-telegram-bot = "21.6"
+python-telegram-bot = "21.7"
 sentry-sdk = "^2.0.0"
 
 [tool.poetry.group.dev.dependencies]
