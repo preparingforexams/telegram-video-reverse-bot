@@ -23,7 +23,7 @@ jobs:
     needs:
       - lint
       - test
-    uses: preparingforexams/actions-container/.github/workflows/build-image-kaniko.yml@v3
+    uses: preparingforexams/actions-container/.github/workflows/build-image-kaniko.yml@v4
     permissions:
       contents: read
       packages: write
