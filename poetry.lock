@@ -22,13 +22,13 @@ trio = ["trio (>=0.26.1)"]
 
 [[package]]
 name = "bs-config"
-version = "1.1.0"
+version = "1.1.1"
 description = "Config"
 optional = false
-python-versions = ">=3.11,<3.14"
+python-versions = "<3.14,>=3.11"
 files = [
-    {file = "bs_config-1.1.0-py3-none-any.whl", hash = "sha256:9b0e1c8701c5be107f5a0bb8189c2a86703107712a8c9553273c1f6bfa88d87c"},
-    {file = "bs_config-1.1.0.tar.gz", hash = "sha256:35f4b16c80d3423c2576ae35687e4d9097e2231530bbc470c901979f0401afac"},
+    {file = "bs_config-1.1.1-py3-none-any.whl", hash = "sha256:00d480c9d3f2f0494a54f2d1da860dfedd4204119dde41db63c630baa4fd57b9"},
+    {file = "bs_config-1.1.1.tar.gz", hash = "sha256:4aa495f29a9456af762d8375d4138270bf538a50b52128659646c7359f487e6f"},
 ]
 
 [package.dependencies]
@@ -416,4 +416,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.13"
-content-hash = "8e397e40b5ca476342c45ae1112f13f258cf7230af3559a2fc0dd1c004ecf709"
+content-hash = "b9b75cf802d2c506ede3a304cbc5c1bba23c7f037a9754c57640d50ac94c8ce2"
