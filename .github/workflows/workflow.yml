@@ -7,6 +7,9 @@ on:
 
 jobs:
   required-meta:
+    permissions:
+      contents: read
+      checks: write
     uses: BlindfoldedSurgery/actions-meta/.github/workflows/required.yml@v1
 
   lint:
