@@ -10,6 +10,7 @@ jobs:
     permissions:
       contents: read
       checks: write
+      pull-requests: write
     uses: BlindfoldedSurgery/actions-meta/.github/workflows/required.yml@v1
 
   lint:
