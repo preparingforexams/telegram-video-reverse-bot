@@ -15,11 +15,13 @@ jobs:
   lint:
     uses: BlindfoldedSurgery/actions-python/.github/workflows/lint.yml@v2
     with:
+      build-tool: uv
       python-version: '3.13'
 
   test:
     uses: BlindfoldedSurgery/actions-python/.github/workflows/test.yml@v2
     with:
+      build-tool: uv
       python-version: '3.13'
 
   build-container-image:
@@ -31,7 +33,7 @@ jobs:
       contents: read
       packages: write
     with:
-      runner-name-build: warp-ubuntu-latest-arm64-2x
+      runner-name-build: warp-ubuntu-2404-arm64-2x
       push-image: ${{ github.ref_name == github.event.repository.default_branch }}
 
   deploy:
