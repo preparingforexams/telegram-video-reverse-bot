@@ -11,6 +11,7 @@ kind: StatefulSet
 metadata:
   name: update-handler
 spec:
+  revisionHistoryLimit: 0
   replicas: 1
   selector:
     matchLabels:
@@ -21,6 +22,11 @@ spec:
       labels:
         app: update-handler
     spec:
+      automountServiceAccountToken: false
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
+        runAsNonRoot: true
       containers:
         - name: app
           image: {{ .Values.image.app }}:{{ .Values.appVersion }}
@@ -31,3 +37,7 @@ spec:
             requests:
               cpu: 10m
               memory: 128Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: [ALL]

@@ -4,10 +4,10 @@ RUN apt-get update -qq \
     && apt-get install -yq --no-install-recommends ffmpeg tini  \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
 
-RUN groupadd --system --gid 500 app
-RUN useradd --system --uid 500 --gid app --create-home --home-dir /app app
+RUN groupadd --system --gid 1000 app
+RUN useradd --system --uid 1000 --gid app --create-home --home-dir /app app
 
-USER app
+USER 1000
 WORKDIR /app
 
 COPY [ "uv.lock", "pyproject.toml", "./" ]
