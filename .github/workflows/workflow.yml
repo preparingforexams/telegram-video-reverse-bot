@@ -32,7 +32,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    uses: preparingforexams/actions-container/.github/workflows/build-dual-image-kaniko.yml@v6
+    uses: preparingforexams/actions-container/.github/workflows/build-dual-image-kaniko.yml@v7
     with:
       push-image: ${{ github.ref_name == github.event.repository.default_branch }}
 
@@ -59,6 +59,6 @@ jobs:
   clean:
     concurrency: cleanup
     needs: [ deploy ]
-    uses: preparingforexams/actions-container/.github/workflows/clean.yml@v6
+    uses: preparingforexams/actions-container/.github/workflows/clean.yml@v7
     permissions:
       packages: write
