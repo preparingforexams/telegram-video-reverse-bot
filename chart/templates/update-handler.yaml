@@ -12,7 +12,7 @@ metadata:
   name: update-handler
 spec:
   revisionHistoryLimit: 0
-  replicas: 1
+  replicas: {{ if .Values.isEnabled }}1{{ else }}0{{ end }}
   selector:
     matchLabels:
       app: update-handler
