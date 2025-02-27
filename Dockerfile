@@ -4,7 +4,7 @@ ARG DEBIAN_VERSION="bookworm"
 # renovate: datasource=python-version depName=python versioning=python
 ARG PYTHON_VERSION="3.13"
 
-# renovate: datasource=pypi depName=uv versioning=docker
+# renovate: datasource=pypi depName=uv
 ARG UV_VERSION="0.5"
 
 FROM ghcr.io/astral-sh/uv:${UV_VERSION}-python${PYTHON_VERSION}-${DEBIAN_VERSION}-slim
