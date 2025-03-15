@@ -38,7 +38,7 @@ class Bot:
             await message.reply_text(
                 "I can't do it when I'm being watched."
                 " Please send me your videos in a private chat.",
-                quote=True,
+                do_quote=True,
             )
             return
 
@@ -47,7 +47,7 @@ class Bot:
         if file_size is not None and file_size > FileSizeLimit.FILESIZE_DOWNLOAD.value:
             await message.reply_text(
                 "Sorry, I can only handle videos up to 20 MB.",
-                quote=True,
+                do_quote=True,
             )
             return
 
@@ -58,12 +58,12 @@ class Bot:
             if reversed_file is None:
                 await message.reply_text(
                     "Sorry, I failed reversing that one 🤷‍♂️",
-                    quote=True,
+                    do_quote=True,
                 )
             else:
                 await message.reply_video(
                     video=reversed_file,
-                    quote=True,
+                    do_quote=True,
                 )
 
     async def _download_video(self, video: telegram.Video, working_dir: Path) -> Path:
