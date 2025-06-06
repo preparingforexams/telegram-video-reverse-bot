@@ -1,6 +1,8 @@
+import asyncio
 import logging
 
 import sentry_sdk
+import uvloop
 
 from app.bot import Bot
 from app.config import Config
@@ -9,6 +11,8 @@ _LOG = logging.getLogger("app")
 
 
 def main() -> None:
+    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+
     logging.basicConfig(level=logging.WARNING)
     _LOG.setLevel(logging.INFO)
 
