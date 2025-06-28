@@ -8,6 +8,7 @@ from typing import Any, cast
 
 import sentry_sdk
 import telegram
+from bs_nats_updater import create_updater
 from telegram.constants import ChatType, FileSizeLimit
 from telegram.ext import Application, MessageHandler, filters
 
@@ -21,7 +22,11 @@ class Bot:
         self.config = config
 
     def run(self) -> None:
-        app = Application.builder().token(self.config.telegram_token).build()
+        app = (
+            Application.builder()
+            .updater(create_updater(self.config.telegram_token, self.config.nats))
+            .build()
+        )
         app.add_handler(MessageHandler(filters.VIDEO, self._handle_message))
         app.run_polling(
             stop_signals=[signal.SIGINT, signal.SIGTERM],
