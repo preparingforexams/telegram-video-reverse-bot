@@ -1,5 +1,5 @@
 # renovate: datasource=docker depName=debian versioning=debian
-ARG DEBIAN_VERSION="bookworm"
+ARG DEBIAN_VERSION="trixie"
 
 # renovate: datasource=python-version depName=python versioning=python
 ARG PYTHON_VERSION="3.13"
