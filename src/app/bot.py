@@ -9,7 +9,7 @@ from typing import Any, cast
 import sentry_sdk
 import telegram
 from bs_nats_updater import create_updater
-from telegram.constants import ChatType, FileSizeLimit
+from telegram.constants import ChatType, FileSizeLimit, UpdateType
 from telegram.ext import Application, MessageHandler, filters
 
 from app.config import Config
@@ -30,6 +30,9 @@ class Bot:
         app.add_handler(MessageHandler(filters.VIDEO, self._handle_message))
         app.run_polling(
             stop_signals=[signal.SIGINT, signal.SIGTERM],
+            allowed_updates=[
+                UpdateType.MESSAGE,
+            ],
         )
 
     async def _handle_message(self, update: telegram.Update, _: Any) -> None:
