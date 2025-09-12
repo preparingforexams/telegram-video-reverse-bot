@@ -12,7 +12,6 @@ metadata:
   name: update-handler
 spec:
   revisionHistoryLimit: 0
-  replicas: {{ if .Values.isEnabled }}1{{ else }}0{{ end }}
   selector:
     matchLabels:
       app: update-handler
@@ -24,20 +23,60 @@ spec:
     spec:
       automountServiceAccountToken: false
       securityContext:
+        fsGroup: 1000
         seccompProfile:
           type: RuntimeDefault
         runAsNonRoot: true
+      volumes:
+        - name: scratch
+          ephemeral:
+            volumeClaimTemplate:
+              spec:
+                storageClassName: longhorn-temp
+                accessModes:
+                  - ReadWriteOnce
+                resources:
+                  requests:
+                    storage: "4Gi"
       containers:
         - name: app
           image: {{ .Values.image.app }}:{{ .Values.appVersion }}
+          env:
+            - name: SCRATCH_DIR
+              value: "/scratch"
           envFrom:
             - secretRef:
                 name: secrets
           resources:
             requests:
-              cpu: 10m
-              memory: 128Mi
+              cpu: "2"
+              memory: 2048Mi
+            limits:
+              cpu: "2"
+              memory: 2048Mi
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
-              drop: [ALL]
+              drop: [ ALL ]
+          volumeMounts:
+            - mountPath: "/scratch"
+              name: scratch
+---
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: update-handler
+spec:
+  maxReplicaCount: 1
+  minReplicaCount: 0
+  cooldownPeriod: 120
+  scaleTargetRef:
+    name: update-handler
+    kind: StatefulSet
+  triggers:
+    - type: nats-jetstream
+      metadata:
+        natsServerMonitoringEndpoint: "nats-headless.nats-system.svc.cluster.local:8222"
+        account: "$G"
+        stream: "telegram-updates"
+        consumer: "video-reverse"

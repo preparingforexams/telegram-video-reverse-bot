@@ -59,7 +59,7 @@ class Bot:
             )
             return
 
-        with tempfile.TemporaryDirectory() as tmpdir:
+        with tempfile.TemporaryDirectory(dir=self.config.scratch_dir) as tmpdir:
             working_dir = Path(tmpdir)
             original_file = await self._download_video(video, working_dir)
             reversed_file = await self._convert_video(original_file, working_dir)
