@@ -5,7 +5,7 @@ ARG DEBIAN_VERSION="trixie"
 ARG PYTHON_VERSION="3.13"
 
 # renovate: datasource=pypi depName=uv versioning=semver-coerced
-ARG UV_VERSION="0.8.21"
+ARG UV_VERSION="0.8.22"
 
 FROM ghcr.io/astral-sh/uv:${UV_VERSION}-python${PYTHON_VERSION}-${DEBIAN_VERSION}-slim
 
