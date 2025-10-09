@@ -32,7 +32,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    uses: preparingforexams/actions-container/.github/workflows/build-dual-image-kaniko.yml@v7
+    uses: preparingforexams/actions-container/.github/workflows/build-dual-image-buildah.yml@v7
     with:
       push-image: ${{ github.ref_name == github.event.repository.default_branch }}
 
