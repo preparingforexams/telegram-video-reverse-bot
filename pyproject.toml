@@ -10,7 +10,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "bs-config [dotenv] ==1.1.2",
+    "bs-config [dotenv] ==1.2.0",
     "bs-nats-updater ==2.0.7",
     "click >=8.1.3, <9.0.0",
     "httpx",
