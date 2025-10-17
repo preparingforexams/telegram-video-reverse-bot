@@ -4,7 +4,7 @@ import signal
 import tempfile
 from asyncio import StreamReader, subprocess
 from pathlib import Path
-from typing import Any, cast
+from typing import TYPE_CHECKING, Any, cast
 
 import sentry_sdk
 import telegram
@@ -12,7 +12,8 @@ from bs_nats_updater import create_updater
 from telegram.constants import ChatType, FileSizeLimit, UpdateType
 from telegram.ext import Application, MessageHandler, filters
 
-from app.config import Config
+if TYPE_CHECKING:
+    from app.config import Config
 
 _LOG = logging.getLogger(__name__)
 
