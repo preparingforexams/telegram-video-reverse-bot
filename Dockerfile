@@ -2,7 +2,7 @@
 ARG DEBIAN_VERSION="trixie"
 
 # renovate: datasource=python-version depName=python versioning=python
-ARG PYTHON_VERSION="3.13"
+ARG PYTHON_VERSION="3.14"
 
 # renovate: datasource=pypi depName=uv versioning=semver-coerced
 ARG UV_VERSION="0.9.3"
