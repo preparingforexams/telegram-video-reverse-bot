@@ -16,7 +16,7 @@ dependencies = [
     "httpx",
     "python-telegram-bot ==22.5",
     "sentry-sdk >=2.0.0, <3.0.0",
-    "uvloop ==0.21.*",
+    "uvloop ==0.22.*",
 ]
 
 [dependency-groups]
