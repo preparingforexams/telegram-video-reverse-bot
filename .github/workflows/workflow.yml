@@ -14,13 +14,13 @@ jobs:
     uses: BlindfoldedSurgery/actions-meta/.github/workflows/required.yml@v2
 
   lint:
-    uses: BlindfoldedSurgery/actions-python/.github/workflows/lint.yml@v5
+    uses: BlindfoldedSurgery/actions-python/.github/workflows/lint.yml@v6
     with:
       build-tool: uv
       python-version: '3.14'
 
   test:
-    uses: BlindfoldedSurgery/actions-python/.github/workflows/test.yml@v5
+    uses: BlindfoldedSurgery/actions-python/.github/workflows/test.yml@v6
     with:
       build-tool: uv
       python-version: '3.14'
