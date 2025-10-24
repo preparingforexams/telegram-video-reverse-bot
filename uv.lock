@@ -47,7 +47,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "bs-config", extras = ["dotenv"], specifier = "==3.0.0", index = "https://pypi.bjoernpetersen.net/simple" },
+    { name = "bs-config", extras = ["dotenv"], specifier = "==3.1.0", index = "https://pypi.bjoernpetersen.net/simple" },
     { name = "bs-nats-updater", specifier = "==3.0.0", index = "https://pypi.bjoernpetersen.net/simple" },
     { name = "click", specifier = ">=8.1.3,<9.0.0" },
     { name = "httpx", specifier = "==0.28.*" },
@@ -65,11 +65,11 @@ dev = [
 
 [[package]]
 name = "bs-config"
-version = "3.0.0"
+version = "3.1.0"
 source = { registry = "https://pypi.bjoernpetersen.net/simple" }
-sdist = { url = "https://pypi.bjoernpetersen.net/packages/bs_config-3.0.0.tar.gz", hash = "sha256:691e1ca3fbab63ae7e96027d38849f7ad6b46316bec6fc1a11c210224fa7ded2" }
+sdist = { url = "https://pypi.bjoernpetersen.net/packages/bs_config-3.1.0.tar.gz", hash = "sha256:bab7ab08ad270a4889ead1d0f36103b25c7ba2dce254ef56dcada03b7ba56ac0" }
 wheels = [
-    { url = "https://pypi.bjoernpetersen.net/packages/bs_config-3.0.0-py3-none-any.whl", hash = "sha256:11f47cea5eac2ec6a7bfedf2c46b5ef3a72d27502094f0d4f29cd7189b7fdbf1" },
+    { url = "https://pypi.bjoernpetersen.net/packages/bs_config-3.1.0-py3-none-any.whl", hash = "sha256:f49e652452e169a3aab2a72e32c57466144ffe25d1f3d281b870a86e2064b8b9" },
 ]
 
 [package.optional-dependencies]
