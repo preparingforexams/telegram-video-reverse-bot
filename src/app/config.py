@@ -19,9 +19,9 @@ class Config:
         env = Env.load()
 
         return cls(
-            app_version=env.get_string("APP_VERSION", default="dev"),
-            nats=NatsConfig.from_env(env.scoped("NATS_")),
-            scratch_dir=Path(env.get_string("SCRATCH_DIR", default="/tmp")),
-            sentry_dsn=env.get_string("SENTRY_DSN"),
-            telegram_token=env.get_string("TELEGRAM_TOKEN", required=True),
+            app_version=env.get_string("app-version", default="dev"),
+            nats=NatsConfig.from_env(env / "nats"),
+            scratch_dir=Path(env.get_string("scratch-dir", default="/tmp")),
+            sentry_dsn=env.get_string("sentry-dsn"),
+            telegram_token=env.get_string("telegram-token", required=True),
         )
