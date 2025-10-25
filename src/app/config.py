@@ -1,3 +1,4 @@
+import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Self
@@ -17,11 +18,14 @@ class Config:
     @classmethod
     def from_env(cls) -> Self:
         env = Env.load()
-
         return cls(
             app_version=env.get_string("app-version", default="dev"),
             nats=NatsConfig.from_env(env / "nats"),
-            scratch_dir=Path(env.get_string("scratch-dir", default="/tmp")),
+            scratch_dir=env.get_string(
+                "scratch-dir",
+                default=Path(tempfile.gettempdir()),
+                transform=Path,
+            ),
             sentry_dsn=env.get_string("sentry-dsn"),
             telegram_token=env.get_string("telegram-token", required=True),
         )
