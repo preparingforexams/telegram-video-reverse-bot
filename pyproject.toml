@@ -39,7 +39,8 @@ bs-nats-updater = { index = "internal" }
 requires = ["uv_build==0.9.*"]
 build-backend = "uv_build"
 
-[tool.pytest.ini_options]
+[tool.pytest]
+strict = true
 addopts = [
     "--import-mode=importlib",
 ]
