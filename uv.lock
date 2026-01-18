@@ -46,8 +46,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "bs-config", extras = ["dotenv"], specifier = "==3.4.0", index = "https://pypi.bjoernpetersen.net/simple" },
-    { name = "bs-nats-updater", specifier = "==3.0.0", index = "https://pypi.bjoernpetersen.net/simple" },
+    { name = "bs-config", extras = ["dotenv"], specifier = "==4.0.0", index = "https://code.bjoernpetersen.net/api/packages/BjoernPetersen/pypi/simple" },
+    { name = "bs-nats-updater", specifier = "==4.0.0", index = "https://code.bjoernpetersen.net/api/packages/BjoernPetersen/pypi/simple" },
     { name = "click", specifier = ">=8.1.3,<9.0.0" },
     { name = "httpx", specifier = "==0.28.*" },
     { name = "python-telegram-bot", specifier = "==22.5" },
@@ -64,11 +64,11 @@ dev = [
 
 [[package]]
 name = "bs-config"
-version = "3.4.0"
-source = { registry = "https://pypi.bjoernpetersen.net/simple" }
-sdist = { url = "https://pypi.bjoernpetersen.net/packages/bs_config-3.4.0.tar.gz", hash = "sha256:93b8a630f370be52e4b8106f1bcb0059857cdc43d43c6efed1a3f6d8f0699460" }
+version = "4.0.0"
+source = { registry = "https://code.bjoernpetersen.net/api/packages/BjoernPetersen/pypi/simple" }
+sdist = { url = "https://code.bjoernpetersen.net/api/packages/BjoernPetersen/pypi/files/bs-config/4.0.0/bs_config-4.0.0.tar.gz", hash = "sha256:bc7b2338b8a6a2d7701ed1eefd22fd79982be3173b759601c8fc99ea361ac807" }
 wheels = [
-    { url = "https://pypi.bjoernpetersen.net/packages/bs_config-3.4.0-py3-none-any.whl", hash = "sha256:036c5e3b60bd4a6eac7e0e52045e63261a0734c3cab4043caeb44f73032dbe5f" },
+    { url = "https://code.bjoernpetersen.net/api/packages/BjoernPetersen/pypi/files/bs-config/4.0.0/bs_config-4.0.0-py3-none-any.whl", hash = "sha256:a1652749c1367045e4de0720f3fe084c8518d14c710861e593dd7b10ca3516e5" },
 ]
 
 [package.optional-dependencies]
@@ -78,17 +78,17 @@ dotenv = [
 
 [[package]]
 name = "bs-nats-updater"
-version = "3.0.0"
-source = { registry = "https://pypi.bjoernpetersen.net/simple" }
+version = "4.0.0"
+source = { registry = "https://code.bjoernpetersen.net/api/packages/BjoernPetersen/pypi/simple" }
 dependencies = [
     { name = "bs-config" },
     { name = "nats-py" },
     { name = "pydantic" },
     { name = "python-telegram-bot" },
 ]
-sdist = { url = "https://pypi.bjoernpetersen.net/packages/bs_nats_updater-3.0.0.tar.gz", hash = "sha256:aa879b0f32981d8f94012a863c28b9e39d8fbccd99a272050d0dc61f40fc0fd5" }
+sdist = { url = "https://code.bjoernpetersen.net/api/packages/BjoernPetersen/pypi/files/bs-nats-updater/4.0.0/bs_nats_updater-4.0.0.tar.gz", hash = "sha256:a34f47e2e86a5b812098475b7438c8f19bf6e0d3b2997d4336ed139b6f0d82a7" }
 wheels = [
-    { url = "https://pypi.bjoernpetersen.net/packages/bs_nats_updater-3.0.0-py3-none-any.whl", hash = "sha256:b9586cf6b1b3ce516251527ddcd2ac27dba0ea98191e0df21fbe383dcf60617c" },
+    { url = "https://code.bjoernpetersen.net/api/packages/BjoernPetersen/pypi/files/bs-nats-updater/4.0.0/bs_nats_updater-4.0.0-py3-none-any.whl", hash = "sha256:eb7996bdf8cc8884e8f76dac9c94a0cc4da4c8ea83f2b7d685cf44bd169f1e70" },
 ]
 
 [[package]]
